@@ -7,8 +7,7 @@ import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
+
 
 const feelingReducer = (state = [], action) => {
     if (action.type === 'ADD_FEELING') {
@@ -17,9 +16,25 @@ const feelingReducer = (state = [], action) => {
     return state;
 }
 
+const understandingReducer = (state = [], action) => {
+    if (action.type === 'ADD_UNDERSTANDING') {
+        return action.payload;
+    }
+    return state;
+}
+
+const supportReducer = (state = [], action) => {
+    if (action.type === 'ADD_SUPPORT') {
+        return action.payload;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers({
-        feelingReducer
+        feelingReducer,
+        understandingReducer,
+        supportReducer
     }),
     applyMiddleware(logger),
 );

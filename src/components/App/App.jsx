@@ -32,9 +32,15 @@ function App() {
           <UnderstandingForm />
         </Route>
 
-        {/* <Route exact path='/addPizzaCheckout'>
-          <PizzaCheckout />
-        </Route> */}
+        <Route exact path='/support'>
+          <SupportForm />
+        </Route>
+
+        <Route exact path='/feedback'>
+          <FeedbackForm />
+        </Route>
+
+      
       
          
         
