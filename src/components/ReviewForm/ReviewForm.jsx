@@ -25,7 +25,7 @@ function ReviewForm() {
                 
         
         .then(response => {
-           // history.push('/thanks');
+           history.push('/thanks');
             
         }).catch(err => {
             console.log('error in POST', err);
