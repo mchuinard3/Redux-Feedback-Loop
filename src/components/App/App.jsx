@@ -40,9 +40,15 @@ function App() {
           <FeedbackForm />
         </Route>
 
-        {/* <Route exact path='/review'>
+        <Route exact path='/review'>
           <ReviewForm />
-        </Route> */}
+        </Route>
+
+        <Route exact path='/thanks'>
+          <ReviewForm />
+        </Route>
+
+        
 
       
       
