@@ -9,7 +9,7 @@ function FeelingForm() {
 
    
 
-    let [number, setNumber] = useState('');
+    let [number, setNumber] = useState(0);
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -17,7 +17,7 @@ function FeelingForm() {
 
     const handleNext = (event) => {
         event.preventDefault();
-        if (number === '') {
+        if (number === 0) {
             alert('Enter a value to continue!')
         } else {
             dispatch({ type: 'ADD_FEELING', payload: number })

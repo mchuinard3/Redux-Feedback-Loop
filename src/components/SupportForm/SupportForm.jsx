@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 function SupportForm() {
     console.log('In support form!')
 
-    let [number, setNumber] = useState('');
+    let [number, setNumber] = useState(0);
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -15,7 +15,7 @@ function SupportForm() {
 
     const handleNext = (event) => {
         event.preventDefault();
-        if (number === '') {
+        if (number === 0) {
             alert('Enter a value to continue!')
         } else {
             dispatch({ type: 'ADD_SUPPORT', payload: number })

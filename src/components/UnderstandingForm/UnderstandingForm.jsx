@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 function UnderstandingForm() {
     console.log('In understanding form!')
 
-    let [number, setNumber] = useState('');
+    let [number, setNumber] = useState(0);
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -15,7 +15,7 @@ function UnderstandingForm() {
 
     const handleNext = (event) => {
         event.preventDefault();
-        if (number === '') {
+        if (number === 0) {
             alert('Enter a value to continue!')
         } else {
             dispatch({ type: 'ADD_UNDERSTANDING', payload: number })
