@@ -22,39 +22,21 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
+
+      <Route exact path='/feeling'>
+          
+          <FeelingForm />
+        </Route>
+
+        <Route exact path='/understanding'>
+          <UnderstandingForm />
+        </Route>
+
+        {/* <Route exact path='/addPizzaCheckout'>
+          <PizzaCheckout />
+        </Route> */}
       
-          <ul>
-            <li>
-              <Link to='/feeling'>
-                {/* <FeelingForm /> */}
-                </Link>
-            </li>
-            <li>
-              <Link to='/understanding'>
-                {/* <UnderstandingForm /> */}
-                </Link>
-            </li>
-            <li>
-              <Link to='/support'>
-                {/* <SupportForm /> */}
-                </Link>
-            </li>
-            <li>
-              <Link to='/comments'>
-                {/* <FeedbackForm /> */}
-                </Link>
-            </li>
-            <li>
-              <Link to='/review'>
-                {/* <ReviewForm /> */}
-                </Link>
-            </li>
-            <li>
-              <Link to='/thanks'>
-                {/* <ThanksForm /> */}
-                </Link>
-            </li>
-          </ul>
+         
         
     </div>
     
