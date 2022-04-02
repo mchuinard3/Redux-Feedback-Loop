@@ -9,22 +9,29 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 
 
-const feelingReducer = (state = [], action) => {
+const feelingReducer = (state = 0, action) => {
     if (action.type === 'ADD_FEELING') {
         return action.payload;
     }
     return state;
 }
 
-const understandingReducer = (state = [], action) => {
+const understandingReducer = (state = 0, action) => {
     if (action.type === 'ADD_UNDERSTANDING') {
         return action.payload;
     }
     return state;
 }
 
-const supportReducer = (state = [], action) => {
+const supportReducer = (state = 0, action) => {
     if (action.type === 'ADD_SUPPORT') {
+        return action.payload;
+    }
+    return state;
+}
+
+const feedbackReducer = (state = '', action) => {
+    if (action.type === 'ADD_FEEDBACK') {
         return action.payload;
     }
     return state;
@@ -34,7 +41,8 @@ const storeInstance = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
-        supportReducer
+        supportReducer,
+        feedbackReducer
     }),
     applyMiddleware(logger),
 );

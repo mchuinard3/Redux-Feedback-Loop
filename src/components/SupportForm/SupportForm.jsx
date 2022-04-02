@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 
@@ -9,18 +9,25 @@ function SupportForm() {
 
     let [number, setNumber] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
 
 
     const handleNext = (event) => {
         event.preventDefault();
+        if (number === '') {
+            alert('Enter a value to continue!')
+        } else {
+            dispatch({ type: 'ADD_SUPPORT', payload: number })
+            history.push('/feedback')
+        }
 
 
-        dispatch({ type: 'ADD_SUPPORT', payload: number })
+
     }
 
     return (
-        
+
         <section>
 
             <h2>How well are you being supported?</h2>
@@ -33,24 +40,25 @@ function SupportForm() {
                     type="number"
                     min={1}
                     max={5}
-                    required
+
                     className="feeling"
                     value={number}
-                    
+
                     onChange={(event) => setNumber(event.target.value)}
 
                 />
 
-                <Link to='/feedback'><button type="submit">
+                <button onClick={handleNext}
+                    type="submit">
                     NEXT
-                </button></Link>
+                </button>
 
 
             </form>
 
         </section>
 
-    
+
     )
 }
 

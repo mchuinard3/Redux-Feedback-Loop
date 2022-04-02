@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 
@@ -9,39 +9,47 @@ function UnderstandingForm() {
 
     let [number, setNumber] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
 
 
     const handleNext = (event) => {
         event.preventDefault();
+        if (number === '') {
+            alert('Enter a value to continue!')
+        } else {
+            dispatch({ type: 'ADD_UNDERSTANDING', payload: number })
+            history.push('/support')
+        }
 
 
-        dispatch({ type: 'ADD_UNDERSTANDING', payload: number })
+
     }
 
     return (
         <section>
 
             <h2>How well are you understanding the content?</h2>
-            
+
             <h3> Understanding? (1-5)</h3>
 
             <form onSubmit={handleNext} className="add-feeling-form">
 
-            <input
-                type="number"
-                required
-                className="feeling"
-                value={number}
-                min={1}
-                max={5}
-                onChange={(event) => setNumber(event.target.value)}
+                <input
+                    type="number"
 
-            />
+                    className="feeling"
+                    value={number}
+                    min={1}
+                    max={5}
+                    onChange={(event) => setNumber(event.target.value)}
 
-            <Link to='/support'><button type="submit">
-                NEXT
-            </button></Link>
+                />
+
+                <button onClick={handleNext}
+                    type="submit">
+                    NEXT
+                </button>
 
 
             </form>

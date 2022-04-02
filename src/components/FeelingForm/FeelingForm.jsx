@@ -1,40 +1,50 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
+
 
 function FeelingForm() {
     console.log('In feeling form!')
 
-    let [number, setNumber] = useState('');
-    const dispatch = useDispatch();
-
    
 
-    const handleNext= (event) => {
-        event.preventDefault();
+    let [number, setNumber] = useState('');
+    const dispatch = useDispatch();
+    const history = useHistory();
 
-       
-        dispatch({ type: 'ADD_FEELING', payload: number })
+
+
+    const handleNext = (event) => {
+        event.preventDefault();
+        if (number === '') {
+            alert('Enter a value to continue!')
+        } else {
+            dispatch({ type: 'ADD_FEELING', payload: number })
+            history.push('/understanding')
+        }
+
+
+        
     }
 
 
-        
-        
-        return (
-            <section>
 
-                <h2>How are you feeling today?</h2>
 
-                <h3>Feeling? (1-5)</h3>
+    return (
+        <section>
 
-                <form onSubmit={handleNext} className="add-feeling-form">
+            <h2>How are you feeling today?</h2>
+
+            <h3>Feeling? (1-5)</h3>
+
+            <form onSubmit={handleNext} className="add-feeling-form">
 
                 <input
 
-
+                    
                     type="number"
-                    required
+                   
                     className="feeling"
                     value={number}
                     min={1}
@@ -43,20 +53,21 @@ function FeelingForm() {
 
                 />
 
-                <Link to='/understanding'><button type="submit">
+                <button onClick={handleNext}
+                type="submit">
                     NEXT
-                </button></Link>
+                </button>
 
-                </form>
-
-
+            </form>
 
 
-            </section>
-        )
-    }
 
-    export default FeelingForm;
+
+        </section>
+    )
+}
+
+export default FeelingForm;
 
 
 

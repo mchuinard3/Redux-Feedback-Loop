@@ -23,7 +23,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
 
-      <Route exact path='/feeling'>
+      <Route exact path='/'>
           
           <FeelingForm />
         </Route>
@@ -39,6 +39,10 @@ function App() {
         <Route exact path='/feedback'>
           <FeedbackForm />
         </Route>
+
+        {/* <Route exact path='/review'>
+          <ReviewForm />
+        </Route> */}
 
       
       
