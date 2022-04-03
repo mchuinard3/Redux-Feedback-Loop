@@ -21,31 +21,31 @@ function ReviewForm() {
     }
 
     const handleSubmit = (event) => {
-        axios.post('/feedback', studentFeedback) 
-                
-        
-        .then(response => {
-           history.push('/thanks');
-            
-        }).catch(err => {
-            console.log('error in POST', err);
-            
-        });
+        axios.post('/feedback', studentFeedback)
+
+
+            .then(response => {
+                history.push('/thanks');
+
+            }).catch(err => {
+                console.log('error in POST', err);
+
+            });
     }
 
     return (
         <>
-        <div>
-           <h1>Review Your Feedback:</h1> 
-           <div>Feeling: {feeling}</div>
-           <div>Understanding: {understanding}</div>
-           <div>Support: {support}</div>
-           <div>Comments: {comments}</div>
-           <button onClick={handleSubmit}
-                type="submit">
+            <div>
+                <h1>Review Your Feedback:</h1>
+                <div>Feeling: {feeling}</div>
+                <div>Understanding: {understanding}</div>
+                <div>Support: {support}</div>
+                <div>Comments: {comments}</div>
+                <button onClick={handleSubmit}
+                    type="submit">
                     SUBMIT
                 </button>
-        </div>
+            </div>
         </>
 
     )

@@ -7,7 +7,7 @@ import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom'
 function FeelingForm() {
     console.log('In feeling form!')
 
-   
+
 
     let [number, setNumber] = useState(0);
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ function FeelingForm() {
         }
 
 
-        
+
     }
 
 
@@ -42,9 +42,9 @@ function FeelingForm() {
 
                 <input
 
-                    
+
                     type="number"
-                   
+
                     className="feeling"
                     value={number}
                     min={1}
@@ -54,7 +54,7 @@ function FeelingForm() {
                 />
 
                 <button onClick={handleNext}
-                type="submit">
+                    type="submit">
                     NEXT
                 </button>
 
