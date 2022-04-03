@@ -12,7 +12,6 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
-
 function App() {
 
   return (
@@ -47,12 +46,6 @@ function App() {
         <Route path='/thanks'>
           <ThanksForm />
         </Route>
-
-
-
-
-
-
 
       </div>
 

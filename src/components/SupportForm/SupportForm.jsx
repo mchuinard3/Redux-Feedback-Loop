@@ -11,8 +11,6 @@ function SupportForm() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-
-
     const handleNext = (event) => {
         event.preventDefault();
         if (number === 0) {
@@ -21,9 +19,6 @@ function SupportForm() {
             dispatch({ type: 'ADD_SUPPORT', payload: number })
             history.push('/feedback')
         }
-
-
-
     }
 
     return (
@@ -53,12 +48,9 @@ function SupportForm() {
                     NEXT
                 </button>
 
-
             </form>
 
         </section>
-
-
     )
 }
 

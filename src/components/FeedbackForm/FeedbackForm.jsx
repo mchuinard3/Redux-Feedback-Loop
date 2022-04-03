@@ -3,16 +3,12 @@ import axios from 'axios';
 import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-
-
 function FeedbackForm() {
     console.log('In feedback form!')
 
     let [comment, setComment] = useState('');
     const dispatch = useDispatch();
     const history = useHistory();
-
-
 
     const handleNext = (event) => {
         event.preventDefault();
@@ -22,12 +18,10 @@ function FeedbackForm() {
             dispatch({ type: 'ADD_FEEDBACK', payload: comment })
             history.push('/review')
         }
-
-
-
     }
 
     return (
+
         <section>
 
             <h2>Any comments you want to leave?</h2>
@@ -51,7 +45,6 @@ function FeedbackForm() {
                     type="submit">
                     NEXT
                 </button>
-
 
             </form>
 

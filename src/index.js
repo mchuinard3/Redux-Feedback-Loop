@@ -8,7 +8,6 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 
-
 const feelingReducer = (state = 0, action) => {
     if (action.type === 'ADD_FEELING') {
         return action.payload;

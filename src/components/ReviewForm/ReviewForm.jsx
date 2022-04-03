@@ -5,8 +5,8 @@ import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom'
 
 function ReviewForm() {
     console.log('In review form!')
+    
     const history = useHistory();
-
     const feeling = useSelector(state => state.feelingReducer)
     const support = useSelector(state => state.supportReducer)
     const understanding = useSelector(state => state.understandingReducer)
@@ -22,7 +22,6 @@ function ReviewForm() {
 
     const handleSubmit = (event) => {
         axios.post('/feedback', studentFeedback)
-
 
             .then(response => {
                 history.push('/thanks');
@@ -47,10 +46,7 @@ function ReviewForm() {
                 </button>
             </div>
         </>
-
     )
 }
-
-
 
 export default ReviewForm;

@@ -1,14 +1,14 @@
 import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 
-
-
 function ThanksForm() {
     console.log('In thank you form!')
+
     const history = useHistory();
 
     const handleSubmit = (event) => {
         history.push('/');
     }
+
     return (
         <>
             <div>
@@ -21,9 +21,6 @@ function ThanksForm() {
         </>
 
     )
-
-
-
 }
 
 export default ThanksForm; 

@@ -7,13 +7,9 @@ import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom'
 function FeelingForm() {
     console.log('In feeling form!')
 
-
-
     let [number, setNumber] = useState(0);
     const dispatch = useDispatch();
     const history = useHistory();
-
-
 
     const handleNext = (event) => {
         event.preventDefault();
@@ -23,13 +19,7 @@ function FeelingForm() {
             dispatch({ type: 'ADD_FEELING', payload: number })
             history.push('/understanding')
         }
-
-
-
     }
-
-
-
 
     return (
         <section>
@@ -41,7 +31,6 @@ function FeelingForm() {
             <form onSubmit={handleNext} className="add-feeling-form">
 
                 <input
-
 
                     type="number"
 
@@ -59,9 +48,6 @@ function FeelingForm() {
                 </button>
 
             </form>
-
-
-
 
         </section>
     )

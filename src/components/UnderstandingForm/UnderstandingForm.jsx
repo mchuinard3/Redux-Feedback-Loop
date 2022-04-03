@@ -3,15 +3,12 @@ import axios from 'axios';
 import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-
 function UnderstandingForm() {
     console.log('In understanding form!')
 
     let [number, setNumber] = useState(0);
     const dispatch = useDispatch();
     const history = useHistory();
-
-
 
     const handleNext = (event) => {
         event.preventDefault();
@@ -21,9 +18,6 @@ function UnderstandingForm() {
             dispatch({ type: 'ADD_UNDERSTANDING', payload: number })
             history.push('/support')
         }
-
-
-
     }
 
     return (
@@ -50,7 +44,6 @@ function UnderstandingForm() {
                     type="submit">
                     NEXT
                 </button>
-
 
             </form>
 
