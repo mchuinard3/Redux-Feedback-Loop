@@ -23,7 +23,6 @@ function App() {
         </header>
 
         <Route exact path='/'>
-
           <FeelingForm />
         </Route>
 
