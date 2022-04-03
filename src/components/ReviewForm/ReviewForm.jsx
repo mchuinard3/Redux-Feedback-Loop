@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { useDispatch, useEffect, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
-import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function ReviewForm() {
     console.log('In review form!')

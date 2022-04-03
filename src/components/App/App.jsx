@@ -1,16 +1,12 @@
 import React from 'react';
-import axios from 'axios';
 import './App.css';
-import { useState, useEffect } from 'react';
 import FeedbackForm from '../FeedbackForm/FeedbackForm';
 import FeelingForm from '../FeelingForm/FeelingForm';
 import ReviewForm from '../ReviewForm/ReviewForm';
 import SupportForm from '../SupportForm/SupportForm';
 import ThanksForm from '../ThanksForm/ThanksForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 function App() {
 

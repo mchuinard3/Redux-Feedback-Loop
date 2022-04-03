@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
-import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 function SupportForm() {
