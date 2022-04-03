@@ -31,15 +31,12 @@ function FeelingForm() {
             <form onSubmit={handleNext} className="add-feeling-form">
 
                 <input
-
                     type="number"
-
                     className="feeling"
                     value={number}
                     min={1}
                     max={5}
                     onChange={(event) => setNumber(event.target.value)}
-
                 />
 
                 <button onClick={handleNext}

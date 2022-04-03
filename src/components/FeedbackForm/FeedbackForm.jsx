@@ -3,6 +3,7 @@ import axios from 'axios';
 import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+
 function FeedbackForm() {
     console.log('In feedback form!')
 
@@ -33,12 +34,9 @@ function FeedbackForm() {
                 <input
                     type="text"
                     size={90}
-
                     className="feeling"
                     value={comment}
-
                     onChange={(event) => setComment(event.target.value)}
-
                 />
 
                 <button onClick={handleNext}

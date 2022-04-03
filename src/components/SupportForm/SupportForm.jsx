@@ -35,12 +35,9 @@ function SupportForm() {
                     type="number"
                     min={1}
                     max={5}
-
                     className="feeling"
                     value={number}
-
                     onChange={(event) => setNumber(event.target.value)}
-
                 />
 
                 <button onClick={handleNext}
