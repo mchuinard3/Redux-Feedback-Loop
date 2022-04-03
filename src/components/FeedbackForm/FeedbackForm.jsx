@@ -38,6 +38,7 @@ function FeedbackForm() {
                 />
 
                 <button onClick={handleNext}
+                    className="feedback"
                     type="submit">
                     NEXT
                 </button>

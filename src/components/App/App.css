@@ -21,3 +21,8 @@
 h4 {
   font-style: italic;
 }
+
+.feedback {
+  position: absolute;
+  top: 40%;
+}
