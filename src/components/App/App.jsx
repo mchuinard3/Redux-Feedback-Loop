@@ -28,23 +28,23 @@ function App() {
           <FeelingForm />
         </Route>
 
-        <Route exact path='/understanding'>
+        <Route path='/understanding'>
           <UnderstandingForm />
         </Route>
 
-        <Route exact path='/support'>
+        <Route path='/support'>
           <SupportForm />
         </Route>
 
-        <Route exact path='/feedback'>
+        <Route path='/feedback'>
           <FeedbackForm />
         </Route>
 
-        <Route exact path='/review'>
+        <Route path='/review'>
           <ReviewForm />
         </Route>
 
-        <Route exact path='/thanks'>
+        <Route path='/thanks'>
           <ThanksForm />
         </Route>
 

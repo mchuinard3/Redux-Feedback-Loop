@@ -38,6 +38,7 @@ function FeedbackForm() {
 
                 <input
                     type="text"
+                    size={90}
 
                     className="feeling"
                     value={comment}
