@@ -44,7 +44,7 @@ function ReviewForm() {
 
     return (
         <>
-            <div>
+            <div className="add-feeling-form">
                 <h1>Review Your Feedback:</h1>
                 <div>Feeling: {feeling}</div>
                 <div>Understanding: {understanding}</div>

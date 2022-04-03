@@ -20,7 +20,7 @@ function ThanksForm() {
 
     return (
         <>
-            <div>
+            <div className="add-feeling-form">
                 <h1>Thank You!</h1>
                 <button onClick={handleSubmit}
                     className="feedback"

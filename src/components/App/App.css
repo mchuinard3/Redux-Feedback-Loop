@@ -29,3 +29,7 @@ h4 {
   border-radius: 100px;
   border: 2px solid black;
 }
+
+.add-feeling-form {
+  background-color: lightgrey;
+}
