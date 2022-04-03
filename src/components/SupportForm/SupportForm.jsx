@@ -3,7 +3,6 @@ import axios from 'axios';
 import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-
 function SupportForm() {
     console.log('In support form!')
 
