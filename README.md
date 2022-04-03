@@ -6,7 +6,7 @@ The Redux Feedback Loop allows students to give feedback on how they feel their 
 
 ## **Problems I Ran Into**
 
-The first problem I ran into was figuring out how to allow the student to jump to the next page when they click on the ***NEXT*** button. I tried using links but I quickly realized the best way to do it for this project was with the `history.push` in my `handleNext` components. The next problem I ran into was making it so the student/user couldn't go to the next page until they had the input filled out on the current page. I tried using `required` in the input but that wasn't working for some reason. I found the best strategy for me was to use an if statement with an alert.   
+The first problem I ran into was figuring out how to allow the student to jump to the next page when they click on the ***NEXT*** button. I tried using links but I quickly realized the best way to do it for this project was with the `history.push` in my `handleNext` methods. The next problem I ran into was making it so the student/user couldn't go to the next page until they had the input filled out on the current page. I tried using `required` in the input but that wasn't working for some reason. I found the best strategy for me was to use an if statement with an alert.   
 
 ## **Built With**
 
