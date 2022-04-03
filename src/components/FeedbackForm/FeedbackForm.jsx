@@ -29,7 +29,7 @@ function FeedbackForm() {
 
             <form onSubmit={handleNext} className="add-feeling-form">
 
-                <input
+                <textarea
                     type="text"
                     size={90}
                     className="feeling"
