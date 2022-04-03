@@ -23,6 +23,9 @@ h4 {
 }
 
 .feedback {
-  position: absolute;
-  top: 40%;
+  background-color: blue;
+  color: white;
+  font-size: 15px;
+  border-radius: 100px;
+  border: 2px solid black;
 }

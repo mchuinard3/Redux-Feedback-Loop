@@ -47,6 +47,7 @@ function FeelingForm() {
                 />
 
                 <button onClick={handleNext}
+                    className="feedback"
                     type="submit">
                     NEXT
                 </button>

@@ -23,6 +23,7 @@ function ThanksForm() {
             <div>
                 <h1>Thank You!</h1>
                 <button onClick={handleSubmit}
+                    className="feedback"
                     type="submit">
                     Leave New Feedback
                 </button>

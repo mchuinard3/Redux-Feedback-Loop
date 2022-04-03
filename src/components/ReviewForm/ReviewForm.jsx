@@ -15,7 +15,7 @@ import { useHistory } from 'react-router-dom';
  */
 function ReviewForm() {
     console.log('In review form!')
-    
+
     const history = useHistory();
     const feeling = useSelector(state => state.feelingReducer)
     const support = useSelector(state => state.supportReducer)
@@ -51,6 +51,7 @@ function ReviewForm() {
                 <div>Support: {support}</div>
                 <div>Comments: {comments}</div>
                 <button onClick={handleSubmit}
+                    className="feedback"
                     type="submit">
                     SUBMIT
                 </button>
