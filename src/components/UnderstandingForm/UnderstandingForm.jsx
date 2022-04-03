@@ -2,6 +2,14 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+
+/*
+ This component takes in a number from 1-5 that the student
+ puts in regarding how well they feel that they are understanding 
+ the material, and dispatches that number to redux. It then
+ takes the student to the support page when they click on the
+ NEXT button.
+ */
 function UnderstandingForm() {
     console.log('In understanding form!')
 

@@ -2,6 +2,17 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
+
+/*
+ This component brings in the reducers from redux and sets
+ their state as variables. Those variables are then placed
+ in an object called studentFeedback, and returned in HTML
+ tags so the data from the student entries is displayed on 
+ the DOM. It also contains an axios.post route that allows
+ the data from the studentFeedback object to be stored in
+ the database. Finally, it takes thr student to the thank 
+ you page when they click on the SUBMIT button. 
+ */
 function ReviewForm() {
     console.log('In review form!')
     

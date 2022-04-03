@@ -2,6 +2,14 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+
+/*
+ This component takes in a number from 1-5 that the student
+ puts in regarding how well they are feeling supported, and 
+ dispatches that number to redux. It then takes the student 
+ to the feedback/comments page when they click on the NEXT
+ button.
+ */
 function SupportForm() {
     console.log('In support form!')
 

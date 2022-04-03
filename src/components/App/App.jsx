@@ -8,6 +8,12 @@ import ThanksForm from '../ThanksForm/ThanksForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
+
+/*
+ This component contains the route paths for each of my other components
+ so when the user clicks on the NEXT button, they are taken to the next
+ appropriate page. 
+ */
 function App() {
 
   return (

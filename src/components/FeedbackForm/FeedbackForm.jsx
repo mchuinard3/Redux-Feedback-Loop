@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+
+/*
+ This component takes in a comment the student leaves, 
+ and dispatches that comment to redux. It then takes the
+ student to the review page when they click on the NEXT
+ button.
+ */
 function FeedbackForm() {
     console.log('In feedback form!')
 

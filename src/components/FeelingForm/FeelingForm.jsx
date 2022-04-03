@@ -5,6 +5,12 @@ import React from 'react';
 // import Button from '@material-ui/core/Button';
 
 
+/*
+ This component takes in a number from 1-5 that the student
+ puts in regarding how they are feeling, and dispatches that
+ number to redux. It then takes the student to the understanding
+ page when they click on the next button.
+ */
 function FeelingForm() {
     console.log('In feeling form!')
 
